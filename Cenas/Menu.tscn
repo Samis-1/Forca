@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://i7174ie0auyu"]
 
+[ext_resource type="Script" uid="uid://bqh6rth0wchqr" path="res://Scripts/menu.gd" id="1_xit3w"]
+
 [node name="Control" type="Control" unique_id=1963890450]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xit3w")
 
 [node name="Panel" type="Panel" parent="." unique_id=1718740752]
 layout_mode = 1
@@ -42,3 +45,6 @@ text = "Play"
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

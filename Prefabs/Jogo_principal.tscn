@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://2p6mu1icmdr3"]
+
+[ext_resource type="Script" uid="uid://ci1lyxsyvc0ge" path="res://Scripts/jogo_principal.gd" id="1_pocx8"]
+
+[node name="Node2D" type="Node2D" unique_id=406984296]
+script = ExtResource("1_pocx8")
+
+[node name="Voltar" type="Button" parent="." unique_id=977397289]
+offset_right = 55.0
+offset_bottom = 31.0
+text = "Voltar"
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

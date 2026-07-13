@@ -1,13 +1,76 @@
 [gd_scene format=3 uid="uid://2p6mu1icmdr3"]
 
 [ext_resource type="Script" uid="uid://ci1lyxsyvc0ge" path="res://Scripts/jogo_principal.gd" id="1_pocx8"]
+[ext_resource type="Texture2D" uid="uid://cveyve7vv1e01" path="res://Imagens/download (2).jpg" id="2_b2oue"]
+[ext_resource type="Texture2D" uid="uid://dyiwlju5o14lq" path="res://Imagens/download__1_-removebg-preview.png" id="3_s5ddj"]
+[ext_resource type="Texture2D" uid="uid://cbexgvjg1sba1" path="res://Imagens/9061433.png" id="4_s5ddj"]
 
 [node name="Node2D" type="Node2D" unique_id=406984296]
 script = ExtResource("1_pocx8")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=322399603]
+position = Vector2(573.5, 326.5)
+scale = Vector2(1.5762942, 1.4587973)
+texture = ExtResource("2_b2oue")
+metadata/_edit_lock_ = true
 
 [node name="Voltar" type="Button" parent="." unique_id=977397289]
 offset_right = 55.0
 offset_bottom = 31.0
 text = "Voltar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1438765646]
+offset_left = 406.0
+offset_top = 420.0
+offset_right = 754.0
+offset_bottom = 490.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1493145331]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer" unique_id=1907705000]
+layout_mode = 2
+
+[node name="Cabeça" type="Sprite2D" parent="." unique_id=1639292543]
+position = Vector2(540, 113)
+texture = ExtResource("3_s5ddj")
+
+[node name="Coluna" type="Sprite2D" parent="." unique_id=197939367]
+position = Vector2(538, 256)
+rotation = 1.5707964
+scale = Vector2(0.349752, 0.23554099)
+texture = ExtResource("4_s5ddj")
+
+[node name="Braço_esq" type="Sprite2D" parent="." unique_id=1515772433]
+position = Vector2(508.00003, 234.00003)
+rotation = -0.9302605
+scale = Vector2(0.22438177, 0.13867188)
+texture = ExtResource("4_s5ddj")
+
+[node name="Braço_dt" type="Sprite2D" parent="." unique_id=2128477862]
+position = Vector2(572.99994, 224.00002)
+rotation = 0.6632251
+scale = Vector2(0.21793963, 0.15826699)
+texture = ExtResource("4_s5ddj")
+
+[node name="Perna_esq" type="Sprite2D" parent="." unique_id=1612720271]
+position = Vector2(511.00003, 358)
+rotation = -0.89884454
+scale = Vector2(0.22851563, 0.15429682)
+texture = ExtResource("4_s5ddj")
+
+[node name="Perna_dt" type="Sprite2D" parent="." unique_id=1396498445]
+position = Vector2(554, 357.0001)
+rotation = -1.977458
+scale = Vector2(0.21311538, 0.1287909)
+texture = ExtResource("4_s5ddj")
+
+[node name="Label" type="Label" parent="." unique_id=1615079289]
+offset_left = 472.0
+offset_top = 418.0
+offset_right = 503.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 8
+text = "BATATA"
 
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
